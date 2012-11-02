@@ -9,7 +9,9 @@ def read(filename):
 
     while(True):
         success, frame = capture.read()
-        
+	frame = cv2.resize(frame, (128, 128))
+
+
 	pl.figure(1)
 	pl.title("red")
 	pl.hist(frame[:,:,0])	
